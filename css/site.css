@@ -1,0 +1,133 @@
+body{
+    display:grid;
+    grid-template-areas: "header header header"
+                         "nav article ads"
+                         "footer footer footer";
+    grid-template-rows: 60px 1fr 60px; 
+    grid-template-columns: 10% 1fr 20%;
+     
+    grid-gap: 10px;
+    height: 100vh;
+    margin: 0;  
+    background-color: rgb(129, 129, 129);                 
+}
+
+header {
+        padding: 10px;
+        background: rgb(0, 0, 0);
+}
+
+article{ 
+        background: rgb(255, 255, 255);
+}
+
+footer {
+        background: rgb(0, 0, 0);
+}
+
+footer p {
+        color: white;
+        padding : 10px;
+        text-align: center;
+}
+nav {
+        margin-left: 10px;
+        background: rgb(255, 255, 255);
+}
+
+div#siteAds {
+        background-color: white;
+}
+
+#pageHeader {grid-area:header;}
+#pageFooter {grid-area:footer;}
+#mainArticle {grid-area:article;}
+#mainNav {grid-area:nav;}
+#siteAds {grid-area: ads;}
+
+header .navMenu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;      
+}
+
+nav .navMenu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        
+}
+
+header .navElement {
+        float:left;
+        
+}
+
+nav .navElement {
+        display: block;
+        color:black;
+        border: solid black;
+        border-width: 1px;
+        
+}
+
+.navElement a {
+        display: block;
+        
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+}
+
+header .navElement a {
+        color : white;
+}
+
+nav .navElement a {
+        color : black;
+}
+
+.navElement a:hover {
+        background-color: rgb(69, 149, 255);
+}
+
+ul.list{
+        list-style-type: none;
+        overflow: hidden;
+}
+ul.list li.listElement {
+      margin : 5px;  
+      display: inline-flex;  
+}
+
+.roundedCard { 
+        border-radius: 15px;
+        background: #7fbfff;
+        padding: 10px;
+        width: 200px;
+        height: 150px;
+}
+
+.roundedCard h4 {
+        text-align: center;
+        border-bottom: solid blue;
+        border-width: 1px;
+}
+
+.roundedCard p {
+        text-align: center;
+}
+
+.imageWrapper {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+.imageWrapper img {
+        height: auto;
+        width: 100%;
+}
+
