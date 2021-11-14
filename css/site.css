@@ -9,12 +9,13 @@ body{
     grid-gap: 10px;
     height: 100vh;
     margin: 0;  
-    background-color: rgb(129, 129, 129);                 
+    background-color: rgb(164, 199, 255); 
+    font-size: 21px;                
 }
 
 header {
         padding: 10px;
-        background: rgb(0, 0, 0);
+        background: rgb(14, 34, 70);
 }
 
 article{ 
@@ -24,6 +25,8 @@ article{
 footer {
         background: rgb(0, 0, 0);
 }
+
+
 
 footer p {
         color: white;
@@ -56,26 +59,22 @@ nav .navMenu {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
-        
+        overflow: hidden;      
 }
 
 header .navElement {
         float:left;
-        
 }
 
 nav .navElement {
         display: block;
         color:black;
         border: solid black;
-        border-width: 1px;
-        
+        border-width: 1px;       
 }
 
 .navElement a {
         display: block;
-        
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -94,12 +93,15 @@ nav .navElement a {
 }
 
 ul.list{
+        margin : 5px auto;  
         list-style-type: none;
         overflow: hidden;
 }
+
 ul.list li.listElement {
-      margin : 5px;  
-      display: inline-flex;  
+        margin : 20px auto;  
+        justify-content: center;
+        display: inline-block;
 }
 
 .roundedCard { 
@@ -131,3 +133,48 @@ ul.list li.listElement {
         width: 100%;
 }
 
+@media (max-width: 1140px){
+        body{
+                grid-template-rows: 100px 1fr 100px;
+                grid-gap: 10px;               
+                grid-template-columns: 150px 1fr 300px;
+        }
+        header{
+                font-size: 31px;
+                padding: 2px;
+        }
+        .navElement a {
+                padding: 7px 8px;
+        }
+        ul.list li.listElement {  
+                margin : 15px auto;  
+                display: inline-block;
+        }
+}
+
+@media (max-width: 1000px){
+        body{
+                grid-template-rows: 100px 1fr 100px;
+                grid-gap: 10px;               
+                grid-template-columns: 200px 1fr 350px;
+        }
+        header{
+                font-size: 41px;
+                padding: 2px;
+        }
+        .navElement a {
+                padding: 7px 8px;
+        }
+        ul.list{
+                margin : 5px auto;  
+        }
+        ul.list li.listElement {  
+                margin : 10px auto;  
+                display: flex;
+        }
+        .roundedCard { 
+                padding: 5px;
+                width: 300px;
+                height: 170px;
+        }
+}
